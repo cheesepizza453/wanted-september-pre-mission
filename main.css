@@ -87,7 +87,6 @@ header .left {
   display: flex;
   justify-content: center;
   background: #f9fafc;
-  padding-bottom: 120px;
 }
 
 .content_container .inner {
@@ -214,7 +213,7 @@ header .left {
   width: 100%;
   height: auto;
   top: 50%;
-  transform: translate(-50% 0);
+  transform: translate(0%, -50%);
 }
 
 .contents .slide_btn_area .arrow {
@@ -374,13 +373,12 @@ footer .inner {
   display: grid;
   grid-template-areas: "a b b b c";
   grid-gap: 2.5rem;
-  /* grid-auto-rows: 275px; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 footer .logo_area {
   grid-area: a;
 }
+
 address {
   min-width: 140px;
   margin-top: 15px;
@@ -393,6 +391,34 @@ footer .menu_area {
   grid-area: b;
   display: flex;
   flex-wrap: wrap;
+}
+
+.foo_menu1 {
+  order: 1;
+}
+
+.foo_menu2 {
+  order: 2;
+}
+
+.foo_menu3 {
+  order: 3;
+}
+
+.foo_menu4 {
+  order: 4;
+}
+
+.foo_menu5 {
+  order: 5;
+}
+
+.foo_menu6 {
+  order: 6;
+}
+
+.foo_menu7 {
+  order: 7;
 }
 
 footer .menu_area .menu {
@@ -415,7 +441,7 @@ footer .mail_container {
 
 .mail_container p {
   color: #bbbbbd;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .mail_container .sns_area {
@@ -514,6 +540,34 @@ footer .mail_area .mail_btn {
     margin-bottom: 0;
     margin-left: 20px;
   }
+
+  .foo_menu1 {
+    order: 1;
+  }
+
+  .foo_menu2 {
+    order: 2;
+  }
+
+  .foo_menu3 {
+    order: 3;
+  }
+
+  .foo_menu4 {
+    order: 5;
+  }
+
+  .foo_menu5 {
+    order: 6;
+  }
+
+  .foo_menu6 {
+    order: 7;
+  }
+
+  .foo_menu7 {
+    order: 4;
+  }
 }
 
 @media (max-width: 768px) {
@@ -536,6 +590,10 @@ footer .mail_area .mail_btn {
     /* grid-auto-rows: 275px; */
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
+  }
+
+  .content4 .stories_title {
+    padding: 2.5rem 1.875rem;
   }
   .content5,
   .content7,
@@ -591,5 +649,33 @@ footer .mail_area .mail_btn {
   .mail_container .sns_area {
     margin-left: 0;
     margin-top: 30px;
+  }
+
+  .foo_menu1 {
+    order: 1;
+  }
+
+  .foo_menu2 {
+    order: 7;
+  }
+
+  .foo_menu3 {
+    order: 4;
+  }
+
+  .foo_menu4 {
+    order: 5;
+  }
+
+  .foo_menu5 {
+    order: 3;
+  }
+
+  .foo_menu6 {
+    order: 2;
+  }
+
+  .foo_menu7 {
+    order: 6;
   }
 }
