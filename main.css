@@ -14,7 +14,7 @@ header .inner {
   justify-content: space-between;
   align-items: center;
   width: 1440px;
-  padding: 30px;
+  padding: 2.5rem;
 }
 
 header .left {
@@ -93,7 +93,7 @@ header .left {
 .content_container .inner {
   max-width: 1440px;
   height: auto;
-  padding: 30px;
+  padding: 2.5rem;
   display: grid;
   grid-template-areas:
     "a a a b"
@@ -128,33 +128,41 @@ header .left {
   align-items: center;
 }
 
+.content1 .text_area .state_area {
+  padding-left: 0;
+}
+.content1 .title_text {
+  padding-left: 0;
+  padding: 0 1.3rem;
+}
+
 .text_area .title_label {
   background: #ff565c;
-  height: 40px;
+  height: 2.5rem;
   display: flex;
   align-items: center;
-  font-size: 14px;
-  padding: 0px 25px;
+  font-size: 0.875rem;
+  padding: 0px 1.5625rem;
   margin-bottom: 20px;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem;
   margin-top: 30px;
 }
 
 .title_text {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  padding-left: 25px;
+  padding-left: 1.5625rem;
   line-height: 1.2;
 }
 
 .contents.slide .title_text {
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.6;
 }
 
 .sub_text {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.4;
   text-align: center;
   opacity: 0.7;
@@ -171,9 +179,9 @@ header .left {
 }
 
 .state_area .state {
-  padding-left: 35px;
+  padding-left: 2.1875rem;
   position: relative;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .state_area .state:before {
@@ -181,9 +189,9 @@ header .left {
   display: block;
   position: absolute;
   top: 2px;
-  left: 12px;
-  width: 18px;
-  height: 16px;
+  left: 0.75rem;
+  width: 1.125rem;
+  height: 1rem;
 }
 
 .state_area .share:before {
@@ -251,7 +259,7 @@ header .left {
 }
 
 .content3 .title_text {
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 1.4;
   margin: 0;
   padding: 0;
@@ -275,31 +283,34 @@ header .left {
   text-align: center;
   border: 1px solid #fff;
   border-bottom: 3px solid #fff;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .content4 {
   grid-area: d;
   background: #fff;
   border: 1px solid #f2f3f6;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .content4 .stories_title {
-  padding: 40px 30px;
+  padding: 40px 1.875rem;
   color: #1d1f24;
-  font-size: 14px;
 }
 
-.content4 .story:first-child {
+/* .content4 .story:first-child {
   border-top: 1px solid #f2f3f6;
-}
+} */
 
 .content4 .story {
   display: flex;
   align-items: start;
   padding: 25px;
   border-bottom: 1px solid #f2f3f6;
+}
+
+.content4 .story:last-child {
+  border-bottom: none;
 }
 
 .content4 .story_bullet {
@@ -313,7 +324,12 @@ header .left {
   text-decoration: none;
   letter-spacing: -0.2px;
   line-height: 1.2;
-  font-size: 18px;
+  font-size: 1.125rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .content5 {
@@ -344,7 +360,124 @@ header .left {
   background-position: center;
 }
 
-@media (max-width: 768px) {
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  background: #1d1f24;
+}
+
+footer .inner {
+  max-width: 1440px;
+  width: 100%;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-areas: "a b b b c";
+  grid-gap: 2.5rem;
+  /* grid-auto-rows: 275px; */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+footer .logo_area {
+  grid-area: a;
+}
+address {
+  min-width: 140px;
+  margin-top: 15px;
+  color: #cdcdce;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+footer .menu_area {
+  grid-area: b;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .menu_area .menu {
+  width: 25%;
+  line-height: 1.8;
+}
+
+footer .menu_area .menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer .mail_container {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mail_container p {
+  color: #bbbbbd;
+  font-size: 0.875rem;
+}
+
+.mail_container .sns_area {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.mail_container .sns_list {
+  display: flex;
+}
+
+.mail_container .sns {
+  width: 18px;
+  height: 18px;
+  margin-left: 20px;
+  opacity: 0.4;
+  background: url("./assets/imgs/snsLogo.png") no-repeat;
+}
+.mail_container .sns.pin {
+  background-position: -16px 0;
+}
+
+.mail_container .sns.twitter {
+  background-position: -33px 0;
+}
+
+.mail_container .sns.facebook {
+  background-position: -50px 0;
+}
+
+footer .mail_area {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+}
+
+footer .mail_area input {
+  flex-grow: 6;
+  padding-left: 10px;
+}
+footer .mail_area input::placeholder {
+  color: #bbb;
+  letter-spacing: -0.02px;
+}
+footer .mail_area .mail_btn {
+  flex-grow: 4;
+  background-color: #ff565c;
+  border: none;
+  color: #fff;
+}
+
+@media (max-width: 1339px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+  }
   .content_container .inner {
     grid-template-areas:
       "a a"
@@ -358,9 +491,35 @@ header .left {
     grid-auto-rows: 335px;
     grid-template-columns: 1fr 1fr;
   }
+
+  footer .inner {
+    grid-template-areas:
+      "a b b b "
+      "c c c c";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer .mail_container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  footer .menu_area .menu {
+    width: 33.3%;
+    line-height: 2.3;
+  }
+
+  .mail_container .sns_area {
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
   .content_container .inner {
     grid-template-areas:
       "a"
@@ -374,12 +533,63 @@ header .left {
       "f"
       "f";
     grid-gap: 20px;
-    grid-auto-rows: 275px;
+    /* grid-auto-rows: 275px; */
+    grid-auto-rows: auto;
     grid-template-columns: 1fr;
   }
   .content5,
   .content7,
   .content8 {
     display: none;
+  }
+
+  .content2,
+  .content6 {
+    height: 275px;
+  }
+
+  .content3 {
+    height: 500px;
+  }
+
+  .content3 .sub_text {
+    line-height: 1.7;
+  }
+
+  .contents .slide_btn_area {
+    display: none;
+  }
+
+  .content1 {
+    height: 500px;
+  }
+
+  .content1 .sub_text {
+    display: none;
+  }
+
+  footer .inner {
+    grid-template-areas:
+      "a"
+      "c"
+      "b"
+      "b";
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+  }
+
+  footer .menu_area .menu {
+    width: 50%;
+    line-height: 2.3;
+  }
+
+  footer .mail_container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .mail_container .sns_area {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
